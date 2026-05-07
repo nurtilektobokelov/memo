@@ -1,0 +1,325 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  backdrop-filter: blur(3px);
+  padding: 20px;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--memo-bg-card);
+  border: 1.5px solid var(--memo-border);
+  border-radius: 18px;
+  padding: 28px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--memo-shadow-md);
+  animation: slideUp 0.18s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--memo-text-primary);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--memo-text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.12s;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  background: var(--memo-bg-secondary);
+}
+
+.profileHero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.heroAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.heroInitials {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--memo-accent-light);
+  color: var(--memo-accent);
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.heroName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--memo-text-primary);
+}
+
+.heroEmail {
+  font-size: 13px;
+  color: var(--memo-text-secondary);
+}
+
+.divider {
+  height: 1px;
+  background: var(--memo-border);
+  margin: 20px 0;
+}
+
+.section {
+  margin-bottom: 4px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--memo-text-primary);
+  margin-bottom: 16px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--memo-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--memo-border);
+  border-radius: var(--memo-radius-sm);
+  font-size: 14px;
+  color: var(--memo-text-primary);
+  background: var(--memo-bg-secondary);
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.input:focus {
+  border-color: var(--memo-accent);
+  background: var(--memo-bg-card);
+  box-shadow: 0 0 0 3px var(--memo-accent-light);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper .input {
+  padding-right: 38px;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--memo-text-tertiary);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.eyeBtn:hover {
+  color: var(--memo-text-secondary);
+}
+
+.inputReadonly {
+  color: var(--memo-text-secondary);
+  cursor: default;
+}
+
+.inputReadonly:focus {
+  border-color: var(--memo-border);
+  background: var(--memo-bg-secondary);
+  box-shadow: none;
+}
+
+.oauthNote {
+  font-size: 13px;
+  color: var(--memo-text-secondary);
+  background: var(--memo-bg-secondary);
+  border: 1px solid var(--memo-border);
+  border-radius: var(--memo-radius-sm);
+  padding: 12px 14px;
+  line-height: 1.5;
+}
+
+.primaryBtn {
+  background: var(--memo-accent);
+  color: var(--memo-accent-text);
+  border: none;
+  border-radius: var(--memo-radius-sm);
+  padding: 9px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  font-family: inherit;
+  box-shadow: 0 3px 0 var(--memo-accent-hover);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.primaryBtn:hover:not(:disabled) { opacity: 0.95; }
+.primaryBtn:active:not(:disabled) { transform: translateY(2px); box-shadow: none; }
+.primaryBtn:disabled { opacity: 0.55; cursor: not-allowed; box-shadow: none; }
+
+.cancelBtn {
+  background: var(--memo-bg-secondary);
+  color: var(--memo-text-primary);
+  border: 1.5px solid var(--memo-border);
+  border-radius: var(--memo-radius-sm);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s;
+  font-family: inherit;
+}
+
+.cancelBtn:hover { border-color: var(--memo-border-strong); }
+
+.msg {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+
+.msgSuccess {
+  background: var(--memo-success-light);
+  color: var(--memo-success);
+  border: 1px solid var(--memo-success);
+}
+
+.msgError {
+  background: var(--memo-danger-light);
+  color: var(--memo-danger);
+  border: 1px solid var(--memo-danger);
+}
+
+.dangerSection {
+  border: 1.5px solid var(--memo-danger);
+  border-radius: var(--memo-radius);
+  padding: 20px;
+  background: var(--memo-danger-light);
+}
+
+.dangerTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--memo-danger);
+  margin-bottom: 16px;
+}
+
+.dangerBtn {
+  background: var(--memo-bg-card);
+  color: var(--memo-danger);
+  border: 1.5px solid var(--memo-danger);
+  border-radius: var(--memo-radius-sm);
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+  font-family: inherit;
+}
+
+.dangerBtn:hover { background: var(--memo-danger-light); }
+
+.dangerBtnStrong {
+  background: var(--memo-danger);
+  color: white;
+  border: none;
+  border-radius: var(--memo-radius-sm);
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.12s;
+  font-family: inherit;
+}
+
+.dangerBtnStrong:hover:not(:disabled) { opacity: 0.88; }
+.dangerBtnStrong:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.deleteConfirm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deleteConfirmText {
+  font-size: 13px;
+  color: var(--memo-danger);
+  line-height: 1.5;
+}
+
+.deleteConfirmActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}

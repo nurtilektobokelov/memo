@@ -1,0 +1,234 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--memo-bg);
+  padding: 24px;
+}
+
+.card {
+  background: var(--memo-bg-card);
+  border-radius: 20px;
+  border: 1.5px solid var(--memo-border);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--memo-shadow-md);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--memo-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.logoDot { color: var(--memo-accent); }
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--memo-text-primary);
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--memo-text-secondary);
+  margin: 0 0 28px;
+}
+
+.oauthButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.oauthBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 20px;
+  border-radius: var(--memo-radius);
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--memo-bg-card);
+  color: var(--memo-text-primary);
+  border: 1.5px solid var(--memo-border);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  font-family: inherit;
+}
+
+.oauthBtn:hover {
+  background: var(--memo-bg-secondary);
+  border-color: var(--memo-border-strong);
+}
+
+.githubBtn {
+  background: #24292E;
+  color: white;
+  border-color: #24292E;
+}
+
+.githubBtn:hover {
+  background: #2F363D;
+  border-color: #2F363D;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--memo-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--memo-border);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--memo-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.input {
+  border: 1.5px solid var(--memo-border);
+  border-radius: var(--memo-radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--memo-text-primary);
+  background: var(--memo-bg-secondary);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.12s, background 0.12s, box-shadow 0.12s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--memo-accent);
+  background: var(--memo-bg-card);
+  box-shadow: 0 0 0 3px var(--memo-accent-light);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper .input {
+  padding-right: 38px;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--memo-text-tertiary);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.eyeBtn:hover {
+  color: var(--memo-text-secondary);
+}
+
+.error {
+  background: var(--memo-danger-light);
+  color: var(--memo-danger);
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: var(--memo-radius-sm);
+  border: 1px solid var(--memo-danger);
+}
+
+.submitBtn {
+  background: var(--memo-accent);
+  color: var(--memo-accent-text);
+  border: none;
+  padding: 12px;
+  border-radius: var(--memo-radius);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+  font-family: inherit;
+  width: 100%;
+  box-shadow: 0 3px 0 var(--memo-accent-hover);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.submitBtn:hover:not(:disabled) { opacity: 0.95; }
+.submitBtn:active:not(:disabled) { transform: translateY(2px); box-shadow: none; }
+.submitBtn:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+
+.toggle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--memo-text-secondary);
+  margin: 20px 0 0;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  color: var(--memo-accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.toggleBtn:hover { text-decoration: underline; }
+
+.loadingWrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--memo-border);
+  border-top-color: var(--memo-accent);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }

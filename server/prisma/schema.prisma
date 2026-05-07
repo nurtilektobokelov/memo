@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id         Int       @id @default(autoincrement())
+  email      String    @unique
+  name       String
+  createdAt  DateTime  @default(now())
+
+  password   String?
+  provider   String?
+  providerId String?
+  avatar     String?
+
+  dailyGoal      Int @default(20)
+  newCardsPerDay Int @default(10)
+
+  decks      Deck[]
+  reviewLogs ReviewLog[]
+}
+
+model Deck {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  category    String?
+  color       String?
+  createdAt   DateTime @default(now())
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+
+  cards Card[]
+}
+
+model Card {
+  id       Int     @id @default(autoincrement())
+  front    String
+  back     String
+  imageUrl String?
+  audioUrl String?
+  createdAt DateTime @default(now())
+
+  state      String   @default("new")
+  nextReview DateTime @default(now())
+  interval   Float    @default(0)
+  ease       Float    @default(2.5)
+  lapses     Int      @default(0)
+
+  deckId Int
+  deck   Deck @relation(fields: [deckId], references: [id])
+
+  reviewLogs ReviewLog[]
+}
+
+model ReviewLog {
+  id          Int      @id @default(autoincrement())
+  rating      Int
+  state       String   @default("review")
+  ease        Float
+  interval    Float
+  lapses      Int      @default(0)
+  nextReview  DateTime
+  reviewedAt  DateTime @default(now())
+  timeSpentMs Int?
+
+  cardId Int
+  card   Card @relation(fields: [cardId], references: [id])
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+}

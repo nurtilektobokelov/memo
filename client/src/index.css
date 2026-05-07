@@ -1,0 +1,114 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+:root {
+  --memo-bg: #F5F5F5;
+  --memo-bg-secondary: #EEEEEE;
+  --memo-bg-card: #FFFFFF;
+  --memo-border: #E0E0E0;
+  --memo-border-strong: #CCCCCC;
+  --memo-text-primary: #141414;
+  --memo-text-secondary: #666666;
+  --memo-text-tertiary: #999999;
+  --memo-accent: #3A6B4A;
+  --memo-accent-hover: #2E5439;
+  --memo-accent-light: #EAF2EC;
+  --memo-accent-text: #FFFFFF;
+  --memo-terracotta: #C85C3A;
+  --memo-terracotta-light: #F7EAE5;
+  --memo-pink: #B05080;
+  --memo-pink-light: #F5E8F0;
+  --memo-blue: #3A6080;
+  --memo-blue-light: #E5EEF4;
+  --memo-amber: #B07820;
+  --memo-amber-light: #F5EFE0;
+  --memo-danger: #B03030;
+  --memo-danger-light: #F5E5E5;
+  --memo-success: #3A6B4A;
+  --memo-success-light: #EAF2EC;
+  --memo-sidebar: #FFFFFF;
+  --memo-sidebar-border: #E0E0E0;
+  --memo-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --memo-shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
+  --memo-radius: 10px;
+  --memo-radius-sm: 6px;
+  --memo-radius-lg: 14px;
+
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--memo-text-primary);
+}
+
+[data-theme="dark"] {
+  --memo-bg: #141414;
+  --memo-bg-secondary: #1A1A1A;
+  --memo-bg-card: #222222;
+  --memo-border: #2E2E2E;
+  --memo-border-strong: #3A3A3A;
+  --memo-text-primary: #F0F0F0;
+  --memo-text-secondary: #AAAAAA;
+  --memo-text-tertiary: #666666;
+  --memo-accent: #4A8A5E;
+  --memo-accent-hover: #5A9A6E;
+  --memo-accent-light: #1A2E20;
+  --memo-accent-text: #FFFFFF;
+  --memo-terracotta: #D06040;
+  --memo-terracotta-light: #2E1A14;
+  --memo-pink: #C06090;
+  --memo-pink-light: #2A1820;
+  --memo-blue: #4A7898;
+  --memo-blue-light: #141E28;
+  --memo-amber: #C09030;
+  --memo-amber-light: #281E08;
+  --memo-danger: #C04040;
+  --memo-danger-light: #280E0E;
+  --memo-success: #4A8A5E;
+  --memo-success-light: #1A2E20;
+  --memo-sidebar: #1A1A1A;
+  --memo-sidebar-border: #2E2E2E;
+  --memo-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --memo-shadow-md: 0 4px 6px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--memo-bg);
+  color: var(--memo-text-primary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  border: none;
+  text-align: left;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--memo-text-primary);
+}
+
+p { margin: 0; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+a { text-decoration: none; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 14px;
+}

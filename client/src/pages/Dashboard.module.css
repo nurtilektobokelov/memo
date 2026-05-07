@@ -1,0 +1,203 @@
+.loadingWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--memo-border);
+  border-top-color: var(--memo-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.emptyState {
+  font-size: 14px;
+  color: var(--memo-text-secondary);
+  text-align: center;
+  padding: 24px 0;
+  line-height: 1.6;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.greeting {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--memo-text-primary);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--memo-text-secondary);
+  font-size: 14px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metricCard {
+  background: var(--memo-bg-card);
+  border-radius: var(--memo-radius-lg);
+  padding: 20px 24px;
+  border: 1.5px solid var(--memo-border);
+  box-shadow: var(--memo-shadow);
+}
+
+.metricLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--memo-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.metricValue {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--memo-terracotta);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.metricGreen { color: var(--memo-blue); }
+.metricPurple { color: var(--memo-accent); }
+
+.metricSub {
+  font-size: 12px;
+  color: var(--memo-text-secondary);
+  margin-top: 6px;
+}
+
+.section {
+  background: var(--memo-bg-card);
+  border-radius: var(--memo-radius-lg);
+  padding: 24px;
+  border: 1.5px solid var(--memo-border);
+  box-shadow: var(--memo-shadow);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--memo-text-primary);
+  margin-bottom: 16px;
+}
+
+.deckGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.deckCard {
+  background: var(--memo-bg-secondary);
+  border-radius: var(--memo-radius);
+  padding: 16px;
+  border: 1.5px solid var(--memo-border);
+  text-align: left;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.deckCard:hover {
+  border-color: var(--memo-border-strong);
+  box-shadow: var(--memo-shadow-md);
+}
+
+.deckName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--memo-text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.deckDue {
+  margin-bottom: 10px;
+}
+
+.dueBadge {
+  font-size: 12px;
+  color: var(--memo-accent);
+  font-weight: 600;
+}
+
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progressBar {
+  height: 4px;
+  background: var(--memo-accent-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--memo-accent);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.progressLabel {
+  font-size: 11px;
+  color: var(--memo-text-secondary);
+}
+
+.startButton {
+  background: var(--memo-accent);
+  color: var(--memo-accent-text);
+  border: none;
+  border-radius: var(--memo-radius);
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--memo-accent-hover);
+  transition: transform 0.1s, box-shadow 0.1s;
+  display: block;
+}
+
+.startButton:hover {
+  opacity: 0.95;
+}
+
+.startButton:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}

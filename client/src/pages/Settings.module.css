@@ -1,0 +1,169 @@
+.shell {
+  max-width: 640px;
+  padding-bottom: 64px;
+}
+
+.card {
+  background: var(--memo-bg-card);
+  border: 1.5px solid var(--memo-border);
+  border-radius: var(--memo-radius-lg);
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: var(--memo-shadow);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--memo-text-primary);
+  margin: 0 0 20px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--memo-text-secondary);
+  margin-bottom: 6px;
+}
+
+.primaryBtn {
+  background: var(--memo-accent);
+  color: var(--memo-accent-text);
+  border: none;
+  border-radius: var(--memo-radius);
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 3px 0 var(--memo-accent-hover);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.primaryBtn:hover:not(:disabled) { opacity: 0.95; }
+.primaryBtn:active:not(:disabled) { transform: translateY(2px); box-shadow: none; }
+.primaryBtn:disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
+
+.msg {
+  font-size: 0.825rem;
+  padding: 8px 12px;
+  border-radius: var(--memo-radius-sm);
+  margin-bottom: 12px;
+}
+
+.msgSuccess {
+  background: var(--memo-success-light);
+  color: var(--memo-success);
+  border: 1px solid var(--memo-success);
+}
+
+.msgError {
+  background: var(--memo-danger-light);
+  color: var(--memo-danger);
+  border: 1px solid var(--memo-danger);
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.sliderValue {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--memo-accent);
+}
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--memo-border);
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--memo-accent);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--memo-accent);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sliderRange {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--memo-text-tertiary);
+  margin-top: 4px;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.toggleSub {
+  font-size: 0.8rem;
+  color: var(--memo-text-secondary);
+  margin-top: 2px;
+}
+
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--memo-border);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.toggleOn {
+  background: var(--memo-accent);
+}
+
+.toggleKnob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(20px);
+}
