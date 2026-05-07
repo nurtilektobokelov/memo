@@ -103,10 +103,8 @@ export default function DeckDetail() {
   const [deletingCard, setDeletingCard] = useState(false);
 
   const [toast, setToast] = useState<string | null>(null);
-  const showToast = (msg: string) => {
-    setToast(msg);
-    setTimeout(() => setToast(null), 3000);
-  };
+  const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(null), 3000); };
+  void showToast;
 
   useEffect(() => {
     const fetchAll = async () => {
@@ -489,7 +487,7 @@ export default function DeckDetail() {
               const reviewLabel = getNextReviewLabel(card);
               const badgeIcon =
                 reviewLabel?.color === "green" ? "⏱ " :
-                reviewLabel?.color === "accent" ? "✓ " :
+                reviewLabel?.color === "blue" ? "✓ " :
                 reviewLabel ? "◆ " : null;
               return (
                 <div key={card.id} className={styles.cardRow}>

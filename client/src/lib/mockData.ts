@@ -35,12 +35,12 @@ export const MOCK_STREAK: number[] = [
 const now = new Date().toISOString();
 
 export const MOCK_CARDS: APICard[] = [
-  { id: 1,  front: "食べる",                         back: "taberu — to eat (ichidan verb)",                                    imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 2,  front: "飲む",                           back: "nomu — to drink (godan verb)",                                     imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 3,  front: "勉強する",                       back: "benkyou suru — to study",                                          imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 4,  front: "What does IAM stand for?",       back: "Identity and Access Management — controls who can access what in AWS.", imageUrl: null, audioUrl: null, deckId: 2, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 5,  front: "What is an AWS Region?",         back: "A geographic area containing multiple isolated Availability Zones.",  imageUrl: null, audioUrl: null, deckId: 2, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 6,  front: "What is the mitochondria?",      back: "The powerhouse of the cell. Produces ATP via cellular respiration.",   imageUrl: null, audioUrl: null, deckId: 3, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 7,  front: "What is the capital of Japan?",  back: "Tokyo (東京) — population ~14 million in the city proper.",           imageUrl: null, audioUrl: null, deckId: 4, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
-  { id: 8,  front: "¿Cómo estás?",                  back: "How are you? (informal) — Estoy bien, gracias.",                      imageUrl: null, audioUrl: null, deckId: 5, createdAt: now, nextReview: now, interval: 1, ease: 2.5 },
+  { id: 1,  front: "食べる",                         back: "taberu — to eat (ichidan verb)",                                    imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 2,  front: "飲む",                           back: "nomu — to drink (godan verb)",                                     imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 3,  front: "勉強する",                       back: "benkyou suru — to study",                                          imageUrl: null, audioUrl: null, deckId: 1, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 4,  front: "What does IAM stand for?",       back: "Identity and Access Management — controls who can access what in AWS.", imageUrl: null, audioUrl: null, deckId: 2, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 5,  front: "What is an AWS Region?",         back: "A geographic area containing multiple isolated Availability Zones.",  imageUrl: null, audioUrl: null, deckId: 2, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 6,  front: "What is the mitochondria?",      back: "The powerhouse of the cell. Produces ATP via cellular respiration.",   imageUrl: null, audioUrl: null, deckId: 3, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 7,  front: "What is the capital of Japan?",  back: "Tokyo (東京) — population ~14 million in the city proper.",           imageUrl: null, audioUrl: null, deckId: 4, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
+  { id: 8,  front: "¿Cómo estás?",                  back: "How are you? (informal) — Estoy bien, gracias.",                      imageUrl: null, audioUrl: null, deckId: 5, createdAt: now, nextReview: now, interval: 1, ease: 2.5, state: "new", lapses: 0 },
 ];
